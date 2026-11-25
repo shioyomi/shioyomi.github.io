@@ -82,8 +82,9 @@ function fold() {
 function showStart() {
   let sel = S.progress ?? 0;
   const draw = () => {
+    document.title = '潮読み — ' + T('site');
     app.innerHTML = `<div class="start">
-      <h1>${T('site')}</h1>
+      <h1><span class="sitename">潮読み</span>${T('site')}</h1>
       <p>${T('intro')}</p>${T('mt') ? `<p class="hint">${T('mt')}</p>` : ''}
       <h2>${T('where')}</h2>
       ${arcGroups().map(g => `<details class="arc"${g.idx.includes(sel) ? ' open' : ''}><summary>${esc(g.arc)}<small>${esc(S.acts[g.idx[0]].short)}〜${esc(S.acts[g.idx[g.idx.length - 1]].short)}</small></summary><div class="actgrid">${g.idx.map(i => `<button data-i="${i}" class="${i === sel ? 'sel' : ''}">${esc(S.acts[i].short)}<small>${esc(S.acts[i].title)}</small></button>`).join('')}</div></details>`).join('')}
@@ -101,6 +102,7 @@ function showStart() {
 
 /* ---------- main render ---------- */
 function render() {
+  document.title = '潮読み — ' + T('site');
   app.innerHTML = `<header><div class="wrap">
       <div class="brand">${T('site')}<small>${esc(S.acts[S.cur] ? S.acts[S.cur].arc : '')}</small></div>
       <div class="bar" id="bar"></div>

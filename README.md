@@ -1,4 +1,6 @@
-# wuwa-echoes
+# shioyomi（潮読み）
+
+https://shioyomi.github.io/
 
 鳴潮（Wuthering Waves）の物語解析サイトです。
 

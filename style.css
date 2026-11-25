@@ -24,6 +24,7 @@ rt { font-size: 0.55em; color: var(--muted); }
 /* start screen */
 .start { max-width: 640px; margin: 48px auto; background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 28px 32px; }
 .start h1 { font-size: 24px; font-weight: 600; margin: 0 0 8px; }
+.start h1 .sitename { display: block; font-size: 13px; letter-spacing: .3em; opacity: .7; margin-bottom: 2px; }
 .start p { color: var(--muted); margin: 0 0 20px; }
 .start h2 { font-size: 15px; font-weight: 600; margin: 20px 0 8px; }
 .actgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 8px; }
